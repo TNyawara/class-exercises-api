@@ -4,7 +4,7 @@
 //An example would be onclick, onhover etc....
 //We usually attach this to a javascript method that we would
 //like executed when that event happens
-//global variables...
+//global variables
 
 var number1_element = document.getElementById('num1');
 var number2_element = document.getElementById('num2');
