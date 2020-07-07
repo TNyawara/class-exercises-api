@@ -1,5 +1,6 @@
 <<?php
 
+//php group exercise
 namespace Bookstore\Domain;
 class Book{
 
