@@ -10,26 +10,30 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+
 /**
+ *
  * dominos.co.ke
- * |/homepage
- * |orders->ordersPage
- * | pizzas-> pizzasPage
+ * | / -> homepage
+ * | orders -> ordersPage
+ * | pizzas -> pizzasPage
  * | pay -> paymentPage
  *
- * GET(Information retrieval) or POST (information update)
+ * GET(information retrieval) or POST (information update)
  * facade (front side of a building)
  */
-
+//return a view
 Route::get('/', function () {
     return view('welcome');
 });
 
 Route::get('home', function () {
-  echo "<h1>I think i get it !!</h1>";
+    return view('example1/home');
 });
 
-Route::get('home', function () {
-    echo "<h1>About</h1>";
+Route::get('about', function () {
+  echo "<h1>About</h1>";
 });
 
+Route::get('breeds','BreedControl@getAll');

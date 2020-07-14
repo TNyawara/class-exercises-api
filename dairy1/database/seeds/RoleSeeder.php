@@ -2,6 +2,8 @@
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 
 class RoleSeeder extends Seeder
 {
@@ -12,34 +14,41 @@ class RoleSeeder extends Seeder
      */
     public function run()
     {
-        //admin
+        //admin user
         DB::table('roles')->insert([
-            'name' =>'admin',
-            'email' => 'Administrator',
-            'created at' => now(),
-            'updated at' => now(),
+            'name' => 'admin',
+            'description' => 'Administrator',
+            'created_at' => now(),
+            'updated_at' => now()
         ]);
         //manager
         DB::table('roles')->insert([
-            'name' =>'manager',
-            'email' => 'manager',
-            'created at' => now(),
-            'updated at' => now(),
+            'name' => 'manager',
+            'description' => 'Manager',
+            'created_at' => now(),
+            'updated_at' => now()
         ]);
-        //user(casuals)
+        //casual
         DB::table('roles')->insert([
-            'name' =>'user',
-            'email' => 'user',
-            'created at' => now(),
-            'updated at' => now(),
+            'name' => 'labourer',
+            'description' => 'Labourer',
+            'created_at' => now(),
+            'updated_at' => now()
         ]);
-        //cooperative-societies
+        //customer
         DB::table('roles')->insert([
-            'name' =>'coop-soc',
-            'email' => 'Cooperative Society',
-            'isOrganization' =>true,
-            'created at' => now(),
-            'updated at' => now(),
+            'name' => 'customer',
+            'description' => 'Customer',
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
+        //societies
+        DB::table('roles')->insert([
+            'name' => 'dairy-coop',
+            'description' => 'Dairy Cooperative',
+            'isOrganization' => true,
+            'created_at' => now(),
+            'updated_at' => now()
         ]);
     }
 }
